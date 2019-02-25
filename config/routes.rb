@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   end
 
   resources :songs, only: [:index, :show]
+  resources :awards, only: [:index, :show]
 
   namespace :admin do
     resources :categories, only: [:index]
+    resources :awards, only: [:index, :new, :create, :show]
   end
 end
