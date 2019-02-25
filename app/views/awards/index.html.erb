@@ -2,3 +2,9 @@
 <% @awards.each do |award| %>
 <%= link_to "#{award.name}", award_path(award.id) %>
 <% end %>
+<section class="top-3">
+<p>Top 3 Awards: </p>
+<% @top3.each do |award| %>
+<%= award.name %>: <%= award.song_count %>
+<% end %>
+</section>

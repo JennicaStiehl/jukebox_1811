@@ -6,7 +6,7 @@ RSpec.describe 'when visitor visits songs show', type: :feature do
     @song_1 = @journey.songs.create(title: "Don't Stop Believin'", length: 345, play_count: 13)
     @song_2 = @journey.songs.create(title: "This Must be the Place", length: 13, play_count: 11)
   end
-  
+
   it 'can get there from the index page' do
     visit songs_path
 
@@ -28,4 +28,5 @@ RSpec.describe 'when visitor visits songs show', type: :feature do
     expect(page).to have_no_content(@song_2.title)
     expect(page).to_not have_content("length: #{@song_2.length}")
   end
+
 end
