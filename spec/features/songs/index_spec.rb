@@ -16,6 +16,8 @@ RSpec.describe 'as an unreg user' do
       expect(page).to have_content(@song1.title)
       expect(page).to have_content(@song2.title)
       expect(page).to have_content(@song3.title)
+      expect(page).to have_content(@award1.name)
+      expect(page).to have_content(@award2.name)
       click_on "#{@song1.title}"
       expect(current_path).to eq(song_path(@song1.id))
     end

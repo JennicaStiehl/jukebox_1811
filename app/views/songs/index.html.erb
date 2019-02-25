@@ -11,4 +11,7 @@
     <p>Length: <%= song.length %></p>
     <%= button_to "Add Song", carts_path(song_id: song.id) %>
   </section>
+  <% @song.awards.each do |award| %>
+  <%= award.name %>
+  <% end %>
 <% end %>
